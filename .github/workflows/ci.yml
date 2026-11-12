@@ -1,0 +1,37 @@
+name: CI Pipeline - Feirinha Shop
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código (Baixar repositório)
+        uses: actions/checkout@v4
+
+      - name: Configurar ambiente Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências (Build)
+        run: npm install
+
+      - name: Executar testes automatizados (Test)
+        run: npm test
+
+      - name: Gerar artefato versionado (Artifact)
+        run: |
+          mkdir -p dist
+          zip -r dist/feirinha-shop-${{ github.run_number }}.zip src/ package.json package-lock.json
+
+      - name: Salvar artefato no GitHub Actions
+        uses: actions/upload-artifact@v4
+        with:
+          name: artefato-aplicacao
+          path: dist/*.zip
