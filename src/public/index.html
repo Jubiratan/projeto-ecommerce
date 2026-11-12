@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feirinha Shop</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-content">
+      <a href="#topo" class="brand" aria-label="Página inicial da Feirinha Shop">
+        <img src="./logo.png" alt="Logotipo da Feirinha Shop" class="brand-logo" />
+        <div class="brand-text">
+          <strong>Feirinha Shop</strong>
+          <span>Frutas frescas na web</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#topo">Início</a>
+        <a href="#cadastro">Cadastro</a>
+        <a href="/pedido">Pedido</a>
+      </nav>
+
+      <a href="#cadastro" class="topbar-cta">Cadastrar</a>
+    </div>
+  </header>
+
+  <header class="hero" id="topo">
+    <div class="container hero-content">
+      <div class="brand-block">
+        <img src="./logo.png" alt="Logotipo da Feirinha Shop" class="site-logo" />
+
+        <p class="hero-kicker">E-commerce de frutas</p>
+        <h1>Cadastro de clientes para compras online</h1>
+
+        <div class="hero-actions">
+          <a href="#cadastro" class="hero-button">Quero me cadastrar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="cards" id="vantagens">
+      <article class="info-card">
+        <h3>Compra online</h3>
+        <p>Cadastro inicial para o cliente começar a comprar frutas na web.</p>
+      </article>
+
+      <article class="info-card">
+        <h3>Entrega organizada</h3>
+        <p>Coleta dados úteis para facilitar contato e entrega dos pedidos.</p>
+      </article>
+
+      <article class="info-card">
+        <h3>Experiência simples</h3>
+        <p>Interface pensada para funcionar bem em desktop e celular.</p>
+      </article>
+    </section>
+
+    <section class="register-wrapper" id="cadastro">
+      <div class="register-side">
+        <div class="section-brand">
+          <img src="./logo.png" alt="Logotipo da Feirinha Shop" class="site-logo site-logo--small" />
+        </div>
+
+        <h2>Criar conta</h2>
+        <p>
+          Preencha os dados abaixo para se cadastrar na Feirinha Shop.
+        </p>
+
+        <ol>
+          <li>Informe seus dados pessoais.</li>
+          <li>Escolha sua fruta favorita.</li>
+          <li>Digite o endereço para entrega.</li>
+          <li>Conclua no botão cadastrar.</li>
+        </ol>
+      </div>
+
+      <form id="registerForm" class="register-form">
+        <div class="field">
+          <label for="fullName">Nome completo</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Digite seu nome" required />
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@email.com" required />
+        </div>
+
+        <div class="field">
+          <label for="phone">Telefone</label>
+          <input type="tel" id="phone" name="phone" placeholder="(71) 99999-9999" required />
+        </div>
+
+        <div class="field">
+          <label for="favoriteFruit">Fruta favorita</label>
+          <select id="favoriteFruit" name="favoriteFruit" required>
+            <option value="">Selecione</option>
+            <option value="Banana">Banana</option>
+            <option value="Maçã">Maçã</option>
+            <option value="Manga">Manga</option>
+            <option value="Uva">Uva</option>
+            <option value="Abacaxi">Abacaxi</option>
+          </select>
+        </div>
+
+        <div class="field full-width">
+          <label for="address">Endereço</label>
+          <input type="text" id="address" name="address" placeholder="Rua, número e bairro" required />
+        </div>
+
+        <div class="field full-width">
+          <label for="notes">Observações</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Ex.: entregar pela manhã"></textarea>
+        </div>
+
+        <div class="checkbox-row full-width">
+          <input type="checkbox" id="acceptedOffers" name="acceptedOffers" required />
+          <label for="acceptedOffers">Aceito os termos e desejo receber ofertas.</label>
+        </div>
+
+        <div class="actions full-width">
+          <p id="message" class="message" aria-live="polite"></p>
+          <button type="submit">Cadastrar</button>
+        </div>
+      </form>
+
+      <section id="successBox" class="success-box hidden" aria-live="polite">
+        <img src="./logo.png" alt="Logotipo da Feirinha Shop" class="site-logo site-logo--success" />
+        <h2>Cadastro com sucesso</h2>
+        <p>Seu cadastro foi enviado com sucesso para a Feirinha Shop.</p>
+        <p>Voltando para a página principal em <span id="countdown">4</span> segundos...</p>
+      </section>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

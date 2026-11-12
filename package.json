@@ -1,0 +1,14 @@
+{
+  "name": "feirinha-shop-express-simples",
+  "version": "1.0.0",
+  "description": "Cadastro simples Feirinha Shop com Express",
+  "main": "server.js",
+"scripts": {
+  "dev": "node src/server.js",
+  "start": "node src/server.js",
+  "test": "node tests/app.test.js"
+},
+  "dependencies": {
+    "express": "^4.22.2"
+  }
+}

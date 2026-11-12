@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "fullName": "Jubiratan Santos",
+    "email": "jubiratan.santos@bol.com.br",
+    "phone": "71988881234",
+    "favoriteFruit": "Manga",
+    "address": "Rua 5, Casa 10. Salvador / Bahia",
+    "notes": "",
+    "acceptedOffers": true,
+    "createdAt": "2026-05-25T18:33:31.497Z"
+  },
+  {
+    "id": 2,
+    "fullName": "Jubiratan Santos",
+    "email": "jubiratan.santos@bol.com.br",
+    "phone": "71912345678",
+    "favoriteFruit": "Banana",
+    "address": "Rua 5, casa 10. Salvador Bahia",
+    "notes": "ok",
+    "acceptedOffers": true,
+    "createdAt": "2026-05-25T18:34:37.042Z"
+  },
+  {
+    "id": 3,
+    "fullName": "João",
+    "email": "aa@aa.com",
+    "phone": "7199999999",
+    "favoriteFruit": "Banana",
+    "address": "aaaa",
+    "notes": "aaa",
+    "acceptedOffers": true,
+    "createdAt": "2026-05-25T18:35:26.327Z"
+  }
+]

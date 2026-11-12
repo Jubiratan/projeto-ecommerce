@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedido | Feirinha Shop</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-content">
+      <a href="/" class="brand">
+        <img src="./logo.png" alt="Logotipo da Feirinha Shop" class="brand-logo" />
+        <div class="brand-text">
+          <strong>Feirinha Shop</strong>
+          <span>Frutas frescas na web</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="/">Início</a>
+        <a href="/pedido">Pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="page-header">
+      <h1>Monte seu pedido</h1>
+      <p>Escolha suas frutas e adicione ao carrinho.</p>
+    </section>
+
+    <section id="productsGrid" class="products-grid"></section>
+
+    <section class="cart-box">
+      <h2>Resumo do pedido</h2>
+      <ul id="cartList"></ul>
+      <p id="cartTotal"><strong>Total:</strong> R$ 0,00</p>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

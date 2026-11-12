@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01",
+    "nome": "Banana",
+    "preco": 4.99,
+    "imagem": "/01.png"
+  },
+  {
+    "id": "02",
+    "nome": "Maçã",
+    "preco": 10.99,
+    "imagem": "/02.png"
+  },
+  {
+    "id": "03",
+    "nome": "Manga",
+    "preco": 4.99,
+    "imagem": "/03.png"
+  },
+  {
+    "id": "04",
+    "nome": "Uva",
+    "preco": 8.99,
+    "imagem": "/04.png"
+  },
+  {
+    "id": "05",
+    "nome": "Abacaxi",
+    "preco": 6.99,
+    "imagem": "/05.png"
+  }
+]
