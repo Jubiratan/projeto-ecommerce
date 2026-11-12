@@ -478,3 +478,7 @@ textarea:focus {
   padding-left: 20px;
   color: #555;
 }
+/* Ajuste de rodapé da feature */
+footer, .main-content {
+  border-radius: 8px;
+}
