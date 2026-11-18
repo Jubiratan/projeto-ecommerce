@@ -34,7 +34,7 @@ jobs:
           zip -r dist/feirinha-shop-${{ github.run_number }}.zip src/ package.json package-lock.json Dockerfile
 
       - name: Salvar artefato no GitHub Actions
-        uses: upload-artifact@v4
+        uses:  actions/upload-artifact@v4
         with:
           name: artefato-aplicacao
           path: dist/*.zip
