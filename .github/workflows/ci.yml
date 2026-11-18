@@ -11,27 +11,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código (Baixar repositório)
+      - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Configurar ambiente Node.js
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Instalar dependências (Build)
+      - name: Instalar dependências
         run: npm install
 
-      - name: Executar testes automatizados (Test)
+      - name: Executar testes automatizados
         run: npm test
 
-      - name: Gerar artefato versionado (Artifact)
+      - name: Construir Imagem Docker (Prática 3)
+        run: docker build -t feirinha-shop:${{ github.run_number }} .
+
+      - name: Gerar artefato versionado
         run: |
           mkdir -p dist
-          zip -r dist/feirinha-shop-${{ github.run_number }}.zip src/ package.json package-lock.json
+          zip -r dist/feirinha-shop-${{ github.run_number }}.zip src/ package.json package-lock.json Dockerfile
 
       - name: Salvar artefato no GitHub Actions
-        uses: actions/upload-artifact@v4
+        uses: upload-artifact@v4
         with:
           name: artefato-aplicacao
           path: dist/*.zip
